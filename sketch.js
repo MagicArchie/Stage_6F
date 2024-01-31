@@ -79,9 +79,10 @@ let images = [];
 let locked = [];
 let visibility = [];
 
-let imgDescriptions = ["Description 1", 
-                       "Description 2", 
-                       "Description 3", 
+let imgDescriptions = [
+  "Λάδι σε μουσαμά, 170 x 145 εκ. <br> ... <br><br> Αρ. Έργου: Π.8635/3", 
+  "Λάδι σε μουσαμά, 170 x 170 εκ. <br> ... <br><br> Αρ. Έργου: Π.8635/2", 
+  "Λάδι σε μουσαμά, 170 x 145 εκ. <br> ... <br><br> Αρ. Έργου: Π.8635/1", 
                       ];
 
 let titles = ["Μάνη – Πάλιρος, Ένα καλοκαίρι 1",
