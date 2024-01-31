@@ -109,9 +109,9 @@ let oneUse3 = false;
 let oneUse4 = false;
 let showMessage = false;
 
-let StageSend = 6;
-localStorage.setItem('data', StageSend);
-let Unlock = parseInt(localStorage.getItem('data'), 10);
+let StageSend = "STG6";
+localStorage.setItem('Stage', StageSend);
+let Unlock = parseInt(localStorage.getItem('Complete6'), 10);
 
 let dynamicImage;
 let hintBackground;
@@ -293,7 +293,7 @@ function setup() {
 function draw() {
   image(backgroundImage, 0, 0, width, height);
   
-  if (Unlock == 2) {
+  if (Unlock == "true") {
     if (oneUse4 == false) {
       keyimg.style('pointer-events', 'auto');
       notification.show();
@@ -707,9 +707,9 @@ function keyPressed() {
 
     // Check the entered code and redirect the user
     if (userCode === "KeyU") {
-      Unlock = 2;
+      Unlock = "true";
     } else if (userCode === "KeyL") {
-      Unlock = 1;
+      Unlock = "false";
     } 
   }
 }
@@ -754,7 +754,7 @@ function mousePressed() {
       mouseX <= 1126 &&
       mouseY >= 110 &&
       mouseY <= 410 &&
-      Unlock != 2
+      Unlock != "true"
     ) {
        choice.setVolume(0.1);
        choice.play();
